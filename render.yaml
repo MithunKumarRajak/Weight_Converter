@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: weight-converter
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn weight_Converter.wsgi
+    autoDeploy: true

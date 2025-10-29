@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-q%#(18gp+!%3l1$ln#bx2)=%&p&6&hg!(awm3@qa+x%lyk-1ft
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['weight-converter-wd0a.onrender.com']
+
 
 
 # Application definition
