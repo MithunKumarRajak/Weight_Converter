@@ -23,4 +23,4 @@ def convert_weight(request):
     else:
         form = WeightForm()
 
-    return render(request, 'converter\index.html', {'form': form, 'result': result})
+    return render(request, 'converter/index.html', {'form': form, 'result': result})
