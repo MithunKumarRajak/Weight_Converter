@@ -1,1 +1,1 @@
-web: gunicorn weight_Converter.wsgi
+web: gunicorn weight_Converter.wsgi:application
