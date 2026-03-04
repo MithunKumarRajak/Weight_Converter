@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q%#(18gp+!%3l1$ln#bx2)=%&p&6&hg!(awm3@qa+x%lyk-1ft'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True  # Set to False for production
 
 ALLOWED_HOSTS = ['weight-converter-wd0a.onrender.com',
                  '127.0.0.1', 'localhost']
@@ -120,6 +120,74 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Production security settings
+SECURE_SSL_REDIRECT = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_SECURITY_POLICY = {
+    "default-src": ("'self'", "https:"),
+    "script-src": ("'self'", "https:", "'unsafe-inline'", "cdnjs.cloudflare.com"),
+    "style-src": ("'self'", "https:", "'unsafe-inline'", "cdnjs.cloudflare.com"),
+    "img-src": ("'self'", "data:", "https:"),
+    "font-src": ("'self'", "https:", "cdnjs.cloudflare.com"),
+    "connect-src": ("'self'", "https:"),
+}
+
+# Caching configuration
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'weight-converter-cache',
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000
+        }
+    }
+}
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'weight_converter.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'INFO',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'converter': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

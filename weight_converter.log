@@ -1,0 +1,74 @@
+INFO 2026-03-05 01:08:54,363 autoreload 2460 12332 Watching for file changes with StatReloader
+INFO 2026-03-05 01:09:44,565 autoreload 12128 16460 Watching for file changes with StatReloader
+INFO 2026-03-05 01:10:21,252 autoreload 16492 1340 Watching for file changes with StatReloader
+INFO 2026-03-05 01:11:39,656 basehttp 16492 15748 "GET / HTTP/1.1" 301 0
+INFO 2026-03-05 01:11:39,663 basehttp 16492 9848 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2026-03-05 01:11:39,663 basehttp 16492 9848 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:11:39,665 basehttp 16492 14876 code 400, message Bad request version ('SÆ¯K\x00\x89')
+ERROR 2026-03-05 01:11:39,668 basehttp 16492 14876 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:28,250 autoreload 4936 6068 Watching for file changes with StatReloader
+INFO 2026-03-05 01:14:33,319 basehttp 4936 8860 "GET / HTTP/1.1" 301 0
+INFO 2026-03-05 01:14:33,373 basehttp 4936 16908 code 400, message Bad request version ('¯·')
+ERROR 2026-03-05 01:14:33,373 basehttp 4936 16908 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:33,382 basehttp 4936 3820 code 400, message Bad request version ('ÃÆÒ&\x9e*¶ì\x88³ÏÉ\x92òS¯H&')
+ERROR 2026-03-05 01:14:33,382 basehttp 4936 3820 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:37,186 basehttp 4936 6268 code 400, message Bad request version ('\x00\x02\x01\x00\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04ÀÀ\x08\x1a:F')
+INFO 2026-03-05 01:14:37,186 basehttp 4936 11880 code 400, message Bad request version ('\x02h2\x08http/1.1\x00+\x00\x07\x06::\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x003\x04ï\x04í')
+ERROR 2026-03-05 01:14:37,186 basehttp 4936 6268 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-05 01:14:37,186 basehttp 4936 11880 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:37,189 basehttp 4936 14972 code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x003\x04ï\x04íºº\x00\x01\x00\x11ì\x04À')
+INFO 2026-03-05 01:14:37,189 basehttp 4936 10540 code 400, message Bad request version ('ògâ\x96¹6ù\x94\x10\x0e\x89kêi«\x84\x03µ½\x8c\x9c')
+ERROR 2026-03-05 01:14:37,189 basehttp 4936 14972 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-05 01:14:37,189 basehttp 4936 10540 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:38,308 basehttp 4936 16200 code 400, message Bad request version ('\x9bÀt"\x88²\x83w\x00')
+INFO 2026-03-05 01:14:38,308 basehttp 4936 8864 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03')
+ERROR 2026-03-05 01:14:38,308 basehttp 4936 16200 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-05 01:14:38,310 basehttp 4936 8864 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:38,311 basehttp 4936 9268 code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S::\x00\x00\x00')
+ERROR 2026-03-05 01:14:38,315 basehttp 4936 9268 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:38,315 basehttp 4936 16016 code 400, message Bad request syntax ("\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03ñ¡Â<1'Ç\x9c\x95M®³\x14ÐÚ8\x18\x9f8\x97\x81\x13\x04s`Ìq")
+ERROR 2026-03-05 01:14:38,315 basehttp 4936 16016 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:39,136 basehttp 4936 5760 code 400, message Bad request version ('RR')
+INFO 2026-03-05 01:14:39,138 basehttp 4936 13676 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x8a\x8a\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01\x00')
+ERROR 2026-03-05 01:14:39,138 basehttp 4936 5760 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-05 01:14:39,138 basehttp 4936 13676 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:39,143 basehttp 4936 8120 code 400, message Bad request version ('\x91ò@õ©,M·äoÛ\x8dz¦\x81y\x94=OjQ\x17p3\x08_qØÂ\x00')
+INFO 2026-03-05 01:14:39,143 basehttp 4936 4392 code 400, message Bad request version ('ùzµOE\x9f\x04õ\x01áQG\x80ÎxteÞH\x8b{\x12_}\x13\x99YÒ`ÿ\x8fK\x0eºÍx.\x950')
+ERROR 2026-03-05 01:14:39,143 basehttp 4936 8120 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-05 01:14:39,146 basehttp 4936 4392 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:39,154 basehttp 4936 6792 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03©')
+ERROR 2026-03-05 01:14:39,154 basehttp 4936 6792 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:14:39,162 basehttp 4936 2148 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2026-03-05 01:14:39,163 basehttp 4936 2148 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-05 01:15:42,377 autoreload 16492 1340 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:15:42,698 autoreload 4936 6068 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:15:43,462 autoreload 5380 12356 Watching for file changes with StatReloader
+INFO 2026-03-05 01:15:43,616 autoreload 13824 11468 Watching for file changes with StatReloader
+INFO 2026-03-05 01:15:47,520 basehttp 13824 14832 "GET / HTTP/1.1" 200 4543
+INFO 2026-03-05 01:15:47,765 basehttp 13824 11804 "GET /static/converter/js/script.js HTTP/1.1" 200 8414
+INFO 2026-03-05 01:15:47,768 basehttp 13824 14832 "GET /static/converter/css/style.css HTTP/1.1" 200 14696
+WARNING 2026-03-05 01:15:48,205 log 13824 14832 Not Found: /favicon.ico
+WARNING 2026-03-05 01:15:48,205 basehttp 13824 14832 "GET /favicon.ico HTTP/1.1" 404 2474
+INFO 2026-03-05 01:15:51,831 autoreload 13824 11468 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:15:52,472 autoreload 5380 12356 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:15:52,645 autoreload 9448 15240 Watching for file changes with StatReloader
+INFO 2026-03-05 01:15:53,535 autoreload 14912 14740 Watching for file changes with StatReloader
+INFO 2026-03-05 01:16:41,117 views 9448 6112 Converted 56.0 KG to 123.46 LBS
+INFO 2026-03-05 01:16:41,145 basehttp 9448 6112 "POST / HTTP/1.1" 200 5164
+INFO 2026-03-05 01:16:41,225 basehttp 9448 6112 "GET /static/converter/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-05 01:16:41,230 basehttp 9448 12684 "GET /static/converter/js/script.js HTTP/1.1" 304 0
+INFO 2026-03-05 01:18:10,116 autoreload 14912 14740 C:\VsCodeFolder\Project\Weight_Converter\converter\views.py changed, reloading.
+INFO 2026-03-05 01:18:11,241 autoreload 6644 7376 Watching for file changes with StatReloader
+INFO 2026-03-05 01:18:21,324 autoreload 6644 7376 C:\VsCodeFolder\Project\Weight_Converter\converter\views.py changed, reloading.
+INFO 2026-03-05 01:18:22,140 autoreload 3780 12928 Watching for file changes with StatReloader
+INFO 2026-03-05 01:23:02,277 autoreload 5352 1284 Watching for file changes with StatReloader
+INFO 2026-03-05 01:23:05,316 basehttp 5352 14180 "GET / HTTP/1.1" 200 4543
+INFO 2026-03-05 01:23:05,598 basehttp 5352 1756 "GET /static/converter/js/script.js HTTP/1.1" 200 11277
+INFO 2026-03-05 01:23:05,599 basehttp 5352 14180 "GET /static/converter/css/style.css HTTP/1.1" 200 18019
+INFO 2026-03-05 01:23:13,741 views 5352 14180 Converted 56.0 KG to 123.46 LBS
+INFO 2026-03-05 01:23:13,831 basehttp 5352 14180 "POST / HTTP/1.1" 200 5463
+INFO 2026-03-05 01:23:29,844 views 5352 14180 Converted 56.0 KG to 123.46 LBS
+INFO 2026-03-05 01:23:29,846 basehttp 5352 14180 "POST / HTTP/1.1" 200 5463
+INFO 2026-03-05 01:23:29,938 basehttp 5352 14180 "GET /static/converter/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-05 01:23:29,941 basehttp 5352 1756 "GET /static/converter/js/script.js HTTP/1.1" 304 0
+INFO 2026-03-05 01:30:53,945 autoreload 11232 5716 Watching for file changes with StatReloader
