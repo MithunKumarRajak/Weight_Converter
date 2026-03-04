@@ -2,6 +2,31 @@ services:
   - type: web
     name: weight-converter
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn weight_Converter.wsgi
+    region: oregon
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --no-input
+    startCommand: gunicorn weight_Converter.wsgi:application --log-file -
     autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: weight-converter-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DJANGO_SETTINGS_MODULE
+        value: weight_Converter.settings
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
+      - key: DEBUG
+        value: False
+
+databases:
+  - name: weight-converter-db
+    databaseName: weight_converter_db
+    user: weight_converter_user
+    plan: free

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,13 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-q%#(18gp+!%3l1$ln#bx2)=%&p&6&hg!(awm3@qa+x%lyk-1ft'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-q%#(18gp+!%3l1$ln#bx2)=%&p&6&hg!(awm3@qa+x%lyk-1ft')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Set to False for production
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['weight-converter-wd0a.onrender.com',
-                 '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+if not DEBUG:
+    ALLOWED_HOSTS.append('.onrender.com')
 
 
 # Application definition
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add WhiteNoise for static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,12 +79,22 @@ WSGI_APPLICATION = 'weight_Converter.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Use PostgreSQL on Render, SQLite locally
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get('DATABASE_URL'),
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
@@ -118,8 +131,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# Option 1: Use Netlify CDN (update after deploying to Netlify)
+# STATIC_URL = os.environ.get('STATIC_URL', '/static/')
+
+# Option 2: Serve from Render (default)
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# For Netlify CDN: After deploying static files to Netlify, 
+# uncomment below and replace with your Netlify URL:
+# STATIC_URL = 'https://your-site-name.netlify.app/'
 
 # Production security settings
 SECURE_SSL_REDIRECT = not DEBUG

@@ -72,3 +72,15 @@ INFO 2026-03-05 01:23:29,846 basehttp 5352 14180 "POST / HTTP/1.1" 200 5463
 INFO 2026-03-05 01:23:29,938 basehttp 5352 14180 "GET /static/converter/css/style.css HTTP/1.1" 304 0
 INFO 2026-03-05 01:23:29,941 basehttp 5352 1756 "GET /static/converter/js/script.js HTTP/1.1" 304 0
 INFO 2026-03-05 01:30:53,945 autoreload 11232 5716 Watching for file changes with StatReloader
+INFO 2026-03-05 01:30:57,061 basehttp 11232 8084 "GET / HTTP/1.1" 200 4543
+INFO 2026-03-05 01:30:57,160 basehttp 11232 10880 "GET /static/converter/js/script.js HTTP/1.1" 304 0
+INFO 2026-03-05 01:30:57,342 basehttp 11232 8084 "GET /static/converter/css/style.css HTTP/1.1" 200 18648
+INFO 2026-03-05 01:49:33,403 autoreload 3780 12928 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:49:33,414 autoreload 11232 5716 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:49:35,016 autoreload 2896 2368 Watching for file changes with StatReloader
+INFO 2026-03-05 01:49:38,790 autoreload 2896 2368 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:49:40,146 autoreload 13428 5884 Watching for file changes with StatReloader
+INFO 2026-03-05 01:49:55,476 autoreload 13428 5884 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:49:56,740 autoreload 16196 16496 Watching for file changes with StatReloader
+INFO 2026-03-05 01:49:58,357 autoreload 16196 16496 C:\VsCodeFolder\Project\Weight_Converter\weight_Converter\settings.py changed, reloading.
+INFO 2026-03-05 01:50:00,003 autoreload 5780 16344 Watching for file changes with StatReloader
