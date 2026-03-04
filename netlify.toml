@@ -1,6 +1,6 @@
 [build]
   base = "staticfiles"
-  publish = "staticfiles"
+  publish = "."
   command = "echo 'Static files ready'"
 
 [[headers]]
@@ -13,9 +13,3 @@
   for = "/admin/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-
-# Redirects for single page applications
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
